@@ -135,14 +135,14 @@
         <img src="static/images/teaser.png" alt="HyperCore overview: per-class hypersphere models and adaptive thresholds via Youden's J statistic" width="70%" height="70%"/>
       </p>
       <p>
-        HyperCore trains one small hypersphere model per class: in-class samples are pulled toward the center while out-of-class samples are pushed away, so the embedding norm becomes an interpretable conformity score (left). Instead of fixing a global pruning ratio, each class picks its own cut with Youden's J statistic — the threshold that maximizes the gap between true positive rate and false positive rate (right).
+        HyperCore trains one small hypersphere model per class: in-class samples are pulled toward the center while out-of-class samples are pushed away, so the embedding norm becomes an interpretable conformity score (left). Instead of fixing a global pruning ratio, each class picks its own cut with Youden's J statistic. It selects the threshold that maximizes the gap between true positive rate and false positive rate (right).
 </p>
 
       <p style="text-align:center;">
         <img src="static/images/noise_plots.png" alt="Confusion-based metrics and Youden's J under increasing label poisoning" width="85%" height="85%"/>
       </p>
       <p>
-        HyperCore stays reliable as labels are corrupted: TPR and TNR remain well above FPR and FNR under increasing label poisoning (left), so clean points are kept and corrupted ones are dropped. The adaptively selected pruning ratio rises with the noise level while Youden's J decays slowly — the cut adapts rather than collapses (right).
+        HyperCore stays reliable as labels are corrupted: TPR and TNR remain well above FPR and FNR under increasing label poisoning (left), so clean points are kept and corrupted ones are dropped. The adaptively selected pruning ratio rises with the noise level while Youden's J decays slowly. The cut adapts rather than collapses (right).
 </p>
       <p style="text-align:center;">
         <img src="static/images/noise_table.png" alt="CIFAR-10 results with 10% corrupted labels" width="85%" height="85%"/>
